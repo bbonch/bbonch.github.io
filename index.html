@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Searcher for Discogs is the Google Chrome extension for the Discogs website. It allows you to listen to tracks on the Discogs by clicking on it. To discover new music is easier with Searcher for Discogs.">
+    <meta name="author" content="Dmitry Sergienko">
+    <meta property="og:title" content="Searcher for Discogs | Google Chrome extension" />
+    <meta property="og:description" content="Searcher for Discogs is the Google Chrome extension for the Discogs website. It allows you to listen to tracks on the Discogs by clicking on it." />
+    <meta property="og:image" content="https://searcherfordiscogs.info/logo.png" />
+
+    <title>Searcher for Discogs | Google Chrome extension</title>
+
+    <link rel="icon" href="logo.png">
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="sfd.css" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50788406-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-50788406-5');
+    </script>
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://searcherfordiscogs.info",
+        "logo": "https://searcherfordiscogs.info/logo.png"
+        }
+    </script>
+
+</head>
+<body class="body-index">
+    <div class="video-wrapper">
+        <video autoplay loop muted>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="wrapper d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-transparent">
+                <a class="navbar-brand" href="/">
+                    <img alt="Searcher for Discogs logo" src="logo-small.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-item nav-link active text-reset" href="/">Home</a>
+                        <a class="nav-item nav-link text-reset" href="/faq.html">FAQ</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="text-center">
+            <h1>
+                <span><span class="searcher">Searcher</span> for </span><a class="d-block d-sm-inline" rel="nofollow" href="https://www.discogs.com" target="_blank"><img class="discogs-logo" alt="Discogs logo" src="discogs-logo.png" /></a>
+            </h1>
+            <h2 class="font-weight-light">Enhance your experience on Discogs with this usefull Google Chrome extension.</h2>
+            <h2 class="font-weight-light">It allows you to listen to tracks on Discogs by clicking on it.</h2>
+            <div>
+                <a id="chrome-web-store" href="https://chrome.google.com/webstore/detail/searcher-for-discogs/kfaklaicipagejpdmnefheakeoikempa"><img alt="Chrome Webstore logo" src="chrome-webstore.png" /></a>
+            </div>
+        </main>
+        <footer class="mt-auto">
+            <div class="d-flex flex-row justify-content-center align-items-center">
+                <a class="px-1 text-reset text-decoration-none" href="https://www.youtube.com/c/searcherfordiscogs" target="_blank">YouTube</a>
+                <a class="px-1 text-reset text-decoration-none" href="http://facebook.com/searcherfordiscogs" target="_blank">Facebook</a>
+                <a class="px-1 text-reset text-decoration-none" href="https://www.instagram.com/discogssearcher" target="_blank">Instagram</a>
+                <a class="px-1 text-reset text-decoration-none" href="mailto:dmitrysergienko2000@gmail.com">@</a>
+            </div>
+            <div class="text-center">&copy; <span class="copyright-year"></span> Searcher for Discogs</div>
+        </footer>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="sfd.js"></script>
+</body>
+</html>
