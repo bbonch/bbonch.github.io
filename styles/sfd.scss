@@ -1,0 +1,80 @@
+@import 'variables.scss';
+
+$accordion-button-active-bg: $white;
+$accordion-button-active-color: $color1;
+$accordion-button-focus-box-shadow: none;
+$link-color: $black;
+$link-decoration: none;
+$link-hover-color: $color1;
+$link-hover-decoration: none;
+$btn-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+$navbar-toggler-focus-width: 0;
+$navbar-light-active-color: $color1;
+$navbar-light-hover-color: $color1;
+$navbar-light-color: $black;
+
+@import "bootstrap/scss/bootstrap";
+
+html,
+body,
+.page,
+#__next {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    position: fixed;
+    background: rgba($black, 0.8);
+    color: $white;
+    overflow: auto;
+}
+
+.discogs-logo {
+    max-width: 150px;
+}
+
+@include media-breakpoint-up(sm) {
+    .discogs-logo {
+        max-width: 170px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .discogs-logo {
+        max-width: 190px;
+    }
+}
+
+.searcher {
+    color: $color1;
+}
+
+video {
+    position: fixed;
+}
+
+.page-index {
+    .navbar {
+        .navbar-toggler {
+            color: $white;
+            border-color: $white;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$white}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+        }
+    }
+
+    a {
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color1;
+        }
+    }
+}
