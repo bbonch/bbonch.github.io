@@ -11,6 +11,16 @@ const Home: NextPage = () => {
     gtag('event', 'ChromeWebStore')
   }
 
+  const videStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: "SFD Video",
+    description: "Basic usage",
+    thumbnailUrl: "https://bbonch.github.io/logo.png",
+    uploadDate: new Date("2022-01-01").toISOString(),
+    contentUrl: "https://bbonch.github.io/video.mp4"
+  }
+
   return (
     <>
       <Head>
@@ -19,6 +29,10 @@ const Home: NextPage = () => {
         <meta name="description" content="Searcher for Discogs is the Google Chrome extension for the Discogs website. It allows you to listen to tracks on the Discogs by clicking on it. To discover new music is easier with Searcher for Discogs." />
         <meta property="og:title" content="Searcher for Discogs | Google Chrome extension" />
         <meta property="og:description" content="Searcher for Discogs is the Google Chrome extension for the Discogs website. It allows you to listen to tracks on the Discogs by clicking on it." />
+
+        <script type="application/ld+json">
+          {JSON.stringify(videStructuredData)}
+        </script>
       </Head>
 
       <div className='page page-index'>
