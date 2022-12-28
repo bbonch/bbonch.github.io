@@ -6,10 +6,6 @@ import Footer from '../components/footer'
 import Questions from '../components/questions'
 
 const FAQ: NextPage = () => {
-    useEffect(() => {
-        import('bootstrap/js/dist/collapse')
-    })
-
     return (
         <>
             <Head>

@@ -2,8 +2,13 @@ import type { AppProps } from 'next/app'
 import '../styles/sfd.scss'
 import Script from 'next/script';
 import Head from 'next/head'
+import { useEffect } from 'react';
 
 function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    import('bootstrap/js/dist/collapse')
+  }, [])
+
   return (
     <>
       <Head>
