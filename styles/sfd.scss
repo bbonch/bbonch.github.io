@@ -1,4 +1,6 @@
-@import 'variables.scss';
+$color1: #ffb400;
+$white: white;
+$black: #000;
 
 $accordion-button-active-bg: $white;
 $accordion-button-active-color: $color1;
@@ -18,9 +20,7 @@ $navbar-light-color: $black;
 @import "bootstrap/scss/bootstrap";
 
 html,
-body,
-.page,
-#__next {
+body {
     height: 100%;
     width: 100%;
 }

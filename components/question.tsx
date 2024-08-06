@@ -1,19 +1,33 @@
+'use client'
+
+import { useRef } from 'react'
+
 type QuestionProps = {
     question: string,
     answer: JSX.Element,
-    questionId: string,
     accordionId: string
 }
 
-export default function Question({ question, answer, questionId, accordionId }: QuestionProps) {
+export default function Question({ question, answer, accordionId }: QuestionProps) {
+    const collapseRef = useRef<HTMLDivElement>(null)
+
+    const toggleQuestion = async () => {
+        if (!collapseRef.current)
+            return
+
+        const collapse = (await import('bootstrap/js/dist/collapse')).default
+        const collapseElement = collapse.getOrCreateInstance(collapseRef.current)
+        collapseElement.toggle()
+    }
+
     return (
         <div className="accordion-item">
             <h2 className="accordion-header" id="headingTwo">
-                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={"#" + questionId}>
+                <button onClick={toggleQuestion} className="accordion-button collapsed" type="button">
                     {question}
                 </button>
             </h2>
-            <div id={questionId} className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent={"#" + accordionId}>
+            <div ref={collapseRef} className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent={"#" + accordionId}>
                 <div className="accordion-body">
                     {answer}
                 </div>
