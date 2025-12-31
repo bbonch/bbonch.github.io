@@ -1,0 +1,11 @@
+services:
+  sfd-website:
+    container_name: sfd-website
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_ANALYTICS_ID: ${NEXT_PUBLIC_ANALYTICS_ID}
+    restart: always
+    ports:
+      - 3000:3000
